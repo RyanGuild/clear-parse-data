@@ -8,6 +8,9 @@
   },
   "author": "Ryan Guild",
   "license": "MIT",
+  "bin":{
+    "clear-parse-data":"./index.js"
+  },
   "dependencies": {
     "parse": "^2.6.0",
     "yargs": "^14.0.0"
