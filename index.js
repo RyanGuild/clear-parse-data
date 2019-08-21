@@ -30,7 +30,7 @@ const options =
             string:"string",
             demandOption:true
         })
-        .option("timeout",
+        .option("t",
         {
             alias: "timeout",
             describe: "the number of ms before timeout",
@@ -38,21 +38,21 @@ const options =
             demandOption:false,
             default:10000
         })
-        .option("appID",
+        .option("a",
         {
             alias: "appID",
             describe: "the parse server app id",
             string:"string",
             demandOption:true
         })
-        .option("masterKey",
+        .option("m",
         {
             alias: "masterKey",
             describe: "the parse server masterKey",
             string:"string",
             demandOption:true
         })
-        .option("serverURL",
+        .option("s",
         {
             alias: "serverURL",
             describe: "the parse server url",
