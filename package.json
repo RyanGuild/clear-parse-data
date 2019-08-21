@@ -1,6 +1,6 @@
 {
   "name": "clear-parse-data",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "regex parse clear cli app",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,8 @@
   },
   "author": "Ryan Guild",
   "license": "MIT",
-  "bin":{
-    "clear-parse-data":"./index.js"
+  "bin": {
+    "clear-parse-data": "./index.js"
   },
   "dependencies": {
     "parse": "^2.6.0",
