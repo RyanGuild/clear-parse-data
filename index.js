@@ -29,13 +29,37 @@ const options =
         })
         .option("timeout",
         {
-            alias: "regex",
-            describe: "the string to match the property against",
+            alias: "timeout",
+            describe: "the number of ms before timeout",
             string:"number",
             demandOption:false,
             default:10000
         })
+        .option("appID",
+        {
+            alias: "appID",
+            describe: "the parse server app id",
+            string:"string",
+            demandOption:true
+        })
+        .option("masterKey",
+        {
+            alias: "masterKey",
+            describe: "the parse server masterKey",
+            string:"string",
+            demandOption:true
+        })
+        .option("serverURL",
+        {
+            alias: "serverURL",
+            describe: "the parse server url",
+            string:"string",
+            demandOption:true
+        })
         .argv
+
+Parse.initialize(options.appID,null, options.masterKey);
+Parse.serverURL = options.serverURL
 
 const Model = Parse.Object.extend(options.className)
 const Query = new Parse.Query(Model)
