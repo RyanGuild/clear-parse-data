@@ -79,7 +79,7 @@ new Promise(async (resolve, reject) => {
         .forEach(
             (object) => {
                 if (Regex.test(object.get(options.propertyName))){
-                    object.destroy()
+                    object.destroy({useMasterKey: true})
                     count += 1
                 }
             });
