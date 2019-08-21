@@ -5,7 +5,7 @@ const Parse = require("parse/node")
 
 const options = 
     yargs
-        .usage("clear-parse-data -c <class-name> -p <class-property-name> -r <regex-name>")
+        .usage("clear-parse-data -c <class-name> -p <class-property-name> -r <regex-name> --appID <parse-appID> --masterKey <parse-masterKey> --serverURL <parse-server-url>")
         .option("c", 
         { 
             alias: "className", 
@@ -58,7 +58,7 @@ const options =
         })
         .argv
 
-Parse.initialize(options.appID,null, options.masterKey);
+Parse.initialize(options.appID,null, options.masterKey)
 Parse.serverURL = options.serverURL
 
 const Model = Parse.Object.extend(options.className)
