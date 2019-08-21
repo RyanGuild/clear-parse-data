@@ -1,6 +1,6 @@
 {
   "name": "clear-parse-data",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "regex parse clear cli app",
   "main": "index.js",
   "scripts": {
