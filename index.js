@@ -74,8 +74,8 @@ const Timer = setTimeout(() => {
 
 new Promise(async (resolve, reject) => {
     let count = 0
-    await Query
-        .find()
+    let result = await Query.find()
+    result
         .forEach(
             (object) => {
                 if (Regex.test(object.get(options.propertyName))){
