@@ -67,13 +67,14 @@ Parse.serverURL = options.serverURL
 const Model = Parse.Object.extend(options.className)
 const Query = new Parse.Query(Model)
 const Regex = new RegExp(options.regex)
+const count = 0
 
 const Timer = setTimeout(() => {
     console.log('operations took too long')
 }, options.timeout);
 
 new Promise(async (resolve, reject) => {
-    let count = 0
+    
     let result = await Query.find()
     result
         .forEach(
